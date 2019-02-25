@@ -24,6 +24,7 @@ coverage
 lib
 .nyc_output
 *.min.js
+keys.js
 
 # Logs
 logs
