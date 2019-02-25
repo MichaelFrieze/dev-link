@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "server": "nodemon src/index.js",
-    "format": "prettier --write \"src/**/*.{js,jsx,css,html,json}\"",
-    "format:check": "prettier --list-different \"src/**/*.{js,jsx,css,json}\"",
-    "lint": "eslint \"src/**/*.{js,jsx}\""
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "format": "prettier --write \"**/*.{js,jsx,css,html,json}\"",
+    "format:check": "prettier --list-different \"**/*.{js,jsx,css,json}\"",
+    "lint": "eslint \"**/*.{js,jsx}\""
   },
   "author": "Michael Frieze",
   "license": "MIT",
