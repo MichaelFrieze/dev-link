@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const users = require("./routes/users");
+const profile = require("./routes/profile");
+const posts = require("./routes/posts");
 
 const app = express();
 
@@ -15,6 +17,11 @@ mongoose
   .catch(err => console.log(err));
 
 app.get("/", (req, res) => res.send("hello"));
+
+// Use Routes
+app.use("/users", users);
+app.use("/profile", profile);
+app.use("/posts", posts);
 
 const port = process.env.PORT || 5000;
 
