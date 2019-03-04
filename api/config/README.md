@@ -5,5 +5,5 @@ module.exports = {
   mongoURI:
 
   secretOrKey:
-};
+}
 ```
