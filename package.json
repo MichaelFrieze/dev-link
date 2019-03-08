@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "install:all": "run-p install:api install:client",
+    "install:api": "cd api && npm ci",
+    "install:client": "cd client && npm ci"
+  },
   "author": "Michael Frieze",
   "license": "MIT",
   "devDependencies": {
