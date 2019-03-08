@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const mongoose = require("mongoose");
 const passport = require("passport");
 
 // Load Validation
@@ -54,7 +53,9 @@ router.get("/all", (req, res) => {
 
       res.json(profiles);
     })
-    .catch(err => res.status(404).json({ profile: "There are no profiles" }));
+    .catch(err =>
+      res.status(404).json(err, { profile: "There are no profiles" })
+    );
 });
 
 // @route   GET profile/handle/:handle
@@ -93,7 +94,9 @@ router.get("/user/:user_id", (req, res) => {
       res.json(profile);
     })
     .catch(err =>
-      res.status(404).json({ profile: "There is no profile for this user" })
+      res
+        .status(404)
+        .json(err, { profile: "There is no profile for this user" })
     );
 });
 
