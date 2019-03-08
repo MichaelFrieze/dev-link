@@ -1,6 +1,6 @@
 # dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnp/
 .pnp.js
 
 # Keys
@@ -13,18 +13,18 @@ keys.js
 .env.production.local
 
 # IDEs and editors
-/.idea
-/.vscode
+.idea/
+.vscode/
 
 # System Files
 .DS_Store
 Thumbs.db
 
 # Generated Files
-/build
-/dist
+build/
+dist/
 *.tgz
-/.npm
+.npm/
 .cache
 
 # testing
@@ -46,5 +46,5 @@ lerna-debug.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/.changelog
+.changelog/
 tmp
