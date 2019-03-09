@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean-install": "run-p clean-install:api clean-install:client",
+    "clean-install:all": "run-p clean-install:api clean-install:client",
     "clean-install:api": "npm ci --prefix api",
     "clean-install:client": "npm ci --prefix client",
-    "install": "run-p install:api install:client",
+    "install:all": "run-p install:api install:client",
     "install:api": "npm install --prefix api",
     "install:client": "npm install --prefix client",
     "start": "concurrently \"npm run start:api\" \"npm run start:client\"",
