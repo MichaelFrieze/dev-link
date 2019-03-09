@@ -6,7 +6,9 @@
   "scripts": {
     "clean-install": "run-p clean-install:api clean-install:client",
     "clean-install:api": "cd api && npm ci",
-    "clean-install:client": "cd client && npm ci"
+    "clean-install:client": "cd client && npm ci",
+    "start:api": "npm run server --prefix api",
+    "start:client": "npm run start --prefix client"
   },
   "author": "Michael Frieze",
   "license": "MIT",
