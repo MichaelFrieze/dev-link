@@ -26,6 +26,10 @@ img {
   padding-top: 80px;
 }
 
+.register {
+  height: 100vh;
+}
+
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
