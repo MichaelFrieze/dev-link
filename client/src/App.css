@@ -34,6 +34,18 @@ img {
   height: 100vh;
 }
 
+.dashboard {
+  height: 100vh;
+}
+
+.profiles {
+  height: 100vh;
+}
+
+.create-profile {
+  height: 100vh;
+}
+
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
