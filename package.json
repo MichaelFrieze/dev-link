@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start --prefix api",
+    "start": "npm install --prefix api && npm run start --prefix api",
     "clean-install:all": "run-p clean-install:api clean-install:client",
     "clean-install:api": "npm ci --prefix api",
     "clean-install:client": "npm ci --prefix client",
