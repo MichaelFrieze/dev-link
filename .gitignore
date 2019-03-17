@@ -21,7 +21,6 @@ api/config/keys_dev.js
 Thumbs.db
 
 # Generated Files
-build/
 dist/
 *.tgz
 .npm/
