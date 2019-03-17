@@ -4,17 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm install --prefix api && npm run start --prefix api",
     "clean-install:all": "run-p clean-install:api clean-install:client",
     "clean-install:api": "npm ci --prefix api",
     "clean-install:client": "npm ci --prefix client",
     "install:all": "run-p install:api install:client",
     "install:api": "npm install --prefix api",
     "install:client": "npm install --prefix client",
-    "dev": "concurrently \"npm run start:api\" \"npm run start:client\"",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:client\"",
     "dev:api": "npm run server --prefix api",
     "dev:client": "npm run start --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm ci --prefix api && npm ci --prefix client && concurrently \"npm run start --prefix api\" \"npm run build --prefix client\""
   },
   "author": "Michael Frieze",
   "license": "MIT",
