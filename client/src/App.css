@@ -22,7 +22,7 @@ img {
   margin-bottom: -50px;
 }
 
-.landing-inner {
+/* .landing-inner {
   padding-top: 80px;
 }
 
@@ -44,7 +44,7 @@ img {
 
 .create-profile {
   height: 100vh;
-}
+} */
 
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.7);
