@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import Moment from 'react-moment';
-import { deleteExperience } from '../../actions/profileActions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import Moment from "react-moment";
+import "moment-timezone";
+import { deleteExperience } from "../../actions/profileActions";
 
 class Experience extends Component {
   onDeleteClick(id) {
@@ -15,11 +16,16 @@ class Experience extends Component {
         <td>{exp.company}</td>
         <td>{exp.title}</td>
         <td>
-          <Moment format="YYYY/MM/DD">{exp.from}</Moment> -
+          <Moment format="MM/DD/YYYY" tz="UTC">
+            {exp.from}
+          </Moment>{" "}
+          -
           {exp.to === null ? (
-            ' Now'
+            " Now"
           ) : (
-            <Moment format="YYYY/MM/DD">{exp.to}</Moment>
+            <Moment format="MM/DD/YYYY" tz="UTC">
+              {exp.to}
+            </Moment>
           )}
         </td>
         <td>
@@ -55,4 +61,7 @@ Experience.propTypes = {
   deleteExperience: PropTypes.func.isRequired
 };
 
-export default connect(null, { deleteExperience })(Experience);
+export default connect(
+  null,
+  { deleteExperience }
+)(Experience);
