@@ -6,26 +6,15 @@ const initialState = {};
 
 const middleware = [thunk];
 
-if (
-  window.navigator.userAgent.includes("Chrome") &&
-  !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(
-    window.navigator.userAgent
+const store = createStore(
+  rootReducer,
+  initialState,
+  compose(
+    applyMiddleware(...middleware),
+    (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ &&
+      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()) ||
+      compose
   )
-) {
-  var store = createStore(
-    rootReducer,
-    initialState,
-    compose(
-      applyMiddleware(...middleware),
-      window.__REDUX_DEVTOOLS_EXTENSION__ &&
-        window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
-  );
-} else {
-  var store = createStore(
-    rootReducer,
-    initialState,
-    compose(applyMiddleware(...middleware))
-  );
-}
+);
+
 export default store;
